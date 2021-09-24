@@ -8,7 +8,7 @@
 
             home: {
             teamName:"Brooklyn Nets",
-            colors:"Black, White",
+            colors:['Black, White'],
             players: {
             "Alan Anderson": {
                 number: 0,
@@ -65,7 +65,7 @@
         
     away: {
         teamName: "Charlotte Hornets",
-        colors:"Turqoise, Purple",
+        colors:["Turqoise, Purple"],
         players: {
             "Jeff Adrien": {
                 number: 4,
@@ -130,32 +130,115 @@
 
 
 
-function numPointsScored(name){
-    return gameObject()["home"]["players"][name]["points"]
-    //return number of points scored for name
+// function numPointsScored(playerName){
+//     let myGameObject = gameObject()
+//     for(let teamKey in myGameObject){
+//         let playerObj = gameObject[teamKey]["players"][playerName]
+
+
+//     }
+// return playerObj["points"]
+
+
+
+
+    // return gameObject()["home"]["players"][name]["points"]
+    // //return number of points scored for name
     
     //How to iterate to player's points
 
+// };
+
+// function shoeSize(name){
+
+//     let gameObject = gameObject();
+
+//     return gameObject["home"]["players"][name]["shoe"]
+// }
+
+// function teamColors(teamName){
+
+
+
+
+    
+// }
+
+// function teamNames(){
+//     let myGameObject = myGameObject();
+
+//     const namesArray = [];
+
+//     for(let teamKey in myGameObject){
+//         namesArray.push(myGameObject[teamKey]["teamName"]);
+//     }return newArray
+
+
+// }
+
+// function playerNumbers(teamName){
+
+//     let myGameObject = myGameObject();
+
+//     const numbersArray = [];
+
+//     for(let teamKey in myGameObject){
+
+//     if(teamName===myGameObject[teamKey]["teamName"])
+
+//     let playerObj = 
+
+//         numbersArray.push(myGameObject[teamKey]["teamName"]);
+//     }return numbersArray
+
+
+
+
+   
+//     // let playerObject = findPlayersByTeamName(team)
+//     // return gameObject()["away"][team, "players"]["number"]
+
+// };
+
+
+
+
+
+
+
+
+
+
+function playerStats(playerName){
+
+
+    for ( let teamKey in gameObject()){
+        if (gameObject()[teamKey]["away"]["players"] === playerName){
+        return gameObject()[teamKey]["away"]["players"]
+    }
+
+    }
+
+    //return object of player's stats
 };
 
-function shoeSize(name){
-    return gameObject() ["home"]["players"][name]["shoe"]
-}
 
-function teamColors(team){
-    return gameObject() ["away"][team, "colors"]
-}
 
-function teamNames(){
 
-}
 
-function playerNumbers(team){
-    // let game =  gameObject()
-    // for(let key of team){
-    //     return game[key]["players", "number"]
 
-    // }
-    return gameObject()["players", "number"]
 
-};
+
+
+
+
+
+// function findPlayersByTeamName(team){
+//     if (gameObject()["away"]["teamName"]===team){
+//         return gameObject()["away"]["players"]
+
+//     }else if(gameObject()["home"]["teamName"]===team){
+//         return gameObject()["home"]["players"]
+//     }
+
+// }
